@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ASCII"?>
+<zenta:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="attributes and functions" id="0fffb723" version="2.2.1">
+  <folder name="Model Root" id="53d5215a">
+    <folder name="metamodel" id="d98fa3cd">
+      <folder name="objects" id="ac66e1cc">
+        <element xsi:type="zenta:BasicRelationship" name="accepts" objectClass="56aea75e" id="56aea75e" source="854c69fa" target="a4a828e6">
+          <property key="fontColor"/>
+          <property key="lineColor"/>
+          <property key="textPosition" value="1"/>
+          <property key="font"/>
+          <property key="lineWidth" value="1"/>
+          <property key="lineDecoration" value="SmallStartArrowDecoration"/>
+        </element>
+        <element xsi:type="zenta:BasicObject" name="Application Component" objectClass="basicobject" id="2fe71f38">
+          <property key="fontColor"/>
+          <property key="fillColor" value="#ffc9b5"/>
+          <property key="font"/>
+          <property key="textAlignment" value="0"/>
+          <property key="elementShape"/>
+        </element>
+        <element xsi:type="zenta:BasicObject" name="Attribute" objectClass="basicobject" id="a4a828e6">
+          <property key="fontColor"/>
+          <property key="fillColor" value="#fdd84a"/>
+          <property key="font"/>
+          <property key="textAlignment" value="0"/>
+          <property key="elementShape"/>
+        </element>
+        <element xsi:type="zenta:BasicObject" name="Class" objectClass="basicobject" id="efaa5ac1">
+          <property key="fontColor"/>
+          <property key="fillColor" value="#ffc9b5"/>
+          <property key="font"/>
+          <property key="textAlignment" value="0"/>
+          <property key="elementShape"/>
+        </element>
+        <element xsi:type="zenta:BasicObject" name="Data Object" objectClass="basicobject" id="10898662">
+          <property key="fontColor"/>
+          <property key="fillColor" value="#fdd84a"/>
+          <property key="font"/>
+          <property key="textAlignment" value="0"/>
+          <property key="elementShape"/>
+        </element>
+        <element xsi:type="zenta:BasicObject" name="Function" objectClass="basicobject" id="854c69fa">
+          <property key="fontColor"/>
+          <property key="fillColor" value="#ffc9b5"/>
+          <property key="font"/>
+          <property key="textAlignment" value="0"/>
+          <property key="elementShape"/>
+        </element>
+        <element xsi:type="zenta:BasicRelationship" name="hasAttribute" objectClass="12b8dfe8" id="12b8dfe8" source="efaa5ac1" target="a4a828e6">
+          <property key="fontColor"/>
+          <property key="lineColor"/>
+          <property key="textPosition" value="1"/>
+          <property key="font"/>
+          <property key="lineWidth" value="1"/>
+          <property key="lineDecoration" value="DiamondSourceDecoration"/>
+        </element>
+        <element xsi:type="zenta:BasicRelationship" name="hasMethod" objectClass="5bd46a76" id="5bd46a76" source="efaa5ac1" target="854c69fa">
+          <property key="fontColor"/>
+          <property key="lineColor"/>
+          <property key="textPosition" value="1"/>
+          <property key="font"/>
+          <property key="lineWidth" value="1"/>
+          <property key="lineDecoration" value="DiamondSourceDecoration"/>
+        </element>
+        <element xsi:type="zenta:BasicRelationship" name="isOfType" objectClass="d1fe4861" id="d1fe4861" source="a4a828e6" target="58bd3919">
+          <property key="fontColor"/>
+          <property key="lineColor"/>
+          <property key="textPosition" value="1"/>
+          <property key="font"/>
+          <property key="lineWidth" value="1"/>
+          <property key="lineDecoration" value="DotSourceDecoration DotTargetDecoration"/>
+        </element>
+        <element xsi:type="zenta:BasicRelationship" name="returns" objectClass="e654b1c5" id="e654b1c5" source="854c69fa" target="58bd3919">
+          <property key="fontColor"/>
+          <property key="lineColor"/>
+          <property key="textPosition" value="1"/>
+          <property key="font"/>
+          <property key="lineWidth" value="1"/>
+          <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        </element>
+        <element xsi:type="zenta:BasicObject" name="Type" objectClass="basicobject" id="58bd3919">
+          <property key="fontColor"/>
+          <property key="fillColor" value="#fdd84a"/>
+          <property key="font"/>
+          <property key="textAlignment" value="0"/>
+          <property key="elementShape" value="emptyShape"/>
+        </element>
+      </folder>
+      <element xsi:type="zenta:ZentaDiagramModel" name="meta" id="3316fa60">
+        <child xsi:type="zenta:DiagramObject" id="d3134ad0" targetConnections="11e237e7" zentaElement="854c69fa">
+          <bounds x="193" y="240"/>
+          <sourceConnection xsi:type="zenta:Connection" id="329fac37" source="d3134ad0" target="eb56ed5a" relationship="56aea75e"/>
+          <sourceConnection xsi:type="zenta:Connection" id="052253c4" source="d3134ad0" target="055d459e" relationship="e654b1c5"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="eb56ed5a" targetConnections="329fac37 1f55cf1c" zentaElement="a4a828e6">
+          <bounds x="462" y="126"/>
+          <sourceConnection xsi:type="zenta:Connection" id="d8b646b5" source="eb56ed5a" target="055d459e" relationship="d1fe4861"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="885a6721" zentaElement="2fe71f38">
+          <bounds x="193" y="36"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3e4eca42" zentaElement="efaa5ac1">
+          <bounds x="193" y="126"/>
+          <sourceConnection xsi:type="zenta:Connection" id="11e237e7" source="3e4eca42" target="d3134ad0" relationship="5bd46a76"/>
+          <sourceConnection xsi:type="zenta:Connection" id="1f55cf1c" source="3e4eca42" target="eb56ed5a" relationship="12b8dfe8"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="58ff7f93" zentaElement="10898662">
+          <bounds x="462" y="36"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="055d459e" targetConnections="d8b646b5 052253c4" zentaElement="58bd3919">
+          <bounds x="648" y="126"/>
+        </child>
+        <property key="Template"/>
+      </element>
+    </folder>
+    <folder name="example model" id="ac920abf">
+      <folder name="objects" id="42950f42">
+        <element xsi:type="zenta:BasicObject" name="Account" objectClass="efaa5ac1" id="d864cb63"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="basicrelation" id="b09136b1" source="d864cb63" target="a3430d97"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="12b8dfe8" id="8593b3e0" source="d864cb63" target="f0e85a23"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="12b8dfe8" id="2ae73c8e" source="d864cb63" target="a3430d97"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="5bd46a76" id="7c690479" source="d864cb63" target="18b41f3d"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="5bd46a76" id="14a2699c" source="d864cb63" target="25d07532"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="5bd46a76" id="ffb3bdd5" source="d864cb63" target="fd9a3647"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="56aea75e" id="dfb8c71d" source="6335a8d8" target="22fc0485"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="56aea75e" id="5ff84cad" source="18b41f3d" target="22fc0485"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="56aea75e" id="04bb57cf" source="fd9a3647" target="686d2ea0"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="d1fe4861" id="8a5c79d5" source="686d2ea0" target="5dc486b7"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="basicrelation" id="0df4f6fb" source="22fc0485" target="5dc486b7"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="d1fe4861" id="02d406d9" source="22fc0485" target="5dc486b7"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="e654b1c5" id="d49689f3" source="6335a8d8" target="5dc486b7"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="e654b1c5" id="9992e6a8" source="18b41f3d" target="8da4ba3d"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="e654b1c5" id="b7ddb94c" source="25d07532" target="5dc486b7"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="e654b1c5" id="01c8e533" source="fd9a3647" target="8da4ba3d"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="d1fe4861" id="da4a7db4" source="f0e85a23" target="5dc486b7"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="d1fe4861" id="76bc01b6" source="a3430d97" target="5dc486b7"/>
+        <element xsi:type="zenta:BasicObject" name="emailAddress" objectClass="a4a828e6" id="f0e85a23"/>
+        <element xsi:type="zenta:BasicObject" name="emailAddress" objectClass="a4a828e6" id="22fc0485"/>
+        <element xsi:type="zenta:BasicObject" name="getEmailAddress" objectClass="854c69fa" id="6335a8d8"/>
+        <element xsi:type="zenta:BasicObject" name="getName" objectClass="854c69fa" id="25d07532"/>
+        <element xsi:type="zenta:BasicObject" name="name" objectClass="a4a828e6" id="a3430d97"/>
+        <element xsi:type="zenta:BasicObject" name="name" objectClass="a4a828e6" id="686d2ea0"/>
+        <element xsi:type="zenta:BasicObject" name="setEmailAddress" objectClass="854c69fa" id="18b41f3d"/>
+        <element xsi:type="zenta:BasicObject" name="setName" objectClass="854c69fa" id="fd9a3647"/>
+        <element xsi:type="zenta:BasicObject" name="String" objectClass="58bd3919" id="5dc486b7"/>
+        <element xsi:type="zenta:BasicObject" name="void" objectClass="58bd3919" id="8da4ba3d"/>
+        <element xsi:type="zenta:BasicRelationship" objectClass="5bd46a76" id="a9db53d7" source="d864cb63" target="6335a8d8"/>
+      </folder>
+      <element xsi:type="zenta:ZentaDiagramModel" name="Example" id="ff3e7b79" connectionRouterType="1">
+        <child xsi:type="zenta:Note" id="aa06aecc">
+          <bounds x="384" y="12" width="312" height="155"/>
+          <content>Account
+===========
+-emailAddress : String
+-name : String
+----------------------------
+-getEmailAddress() : String
+-getName() : String
+-setEmailAddress(String emailAddress) : String
+-setName(String name) : String
+
+</content>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="ed8f62a8" zentaElement="d864cb63">
+          <bounds x="156" y="120"/>
+          <sourceConnection xsi:type="zenta:Connection" id="a86c650f" source="ed8f62a8" target="01e72322" relationship="b09136b1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="180aed1b" source="ed8f62a8" target="01e72322" relationship="2ae73c8e"/>
+          <sourceConnection xsi:type="zenta:Connection" id="99db8734" source="ed8f62a8" target="563383d8" relationship="8593b3e0"/>
+          <sourceConnection xsi:type="zenta:Connection" id="db56838e" source="ed8f62a8" target="e2127d81" relationship="7c690479"/>
+          <sourceConnection xsi:type="zenta:Connection" id="434ea276" source="ed8f62a8" target="4ecf2838" relationship="14a2699c"/>
+          <sourceConnection xsi:type="zenta:Connection" id="6d448f80" source="ed8f62a8" target="f02dbf10" relationship="ffb3bdd5"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="b677cef0" zentaElement="6335a8d8">
+          <bounds x="348" y="229" width="157" height="42"/>
+          <sourceConnection xsi:type="zenta:Connection" id="1b3c6a0d" source="b677cef0" target="317dcb3d" relationship="dfb8c71d"/>
+          <sourceConnection xsi:type="zenta:Connection" id="c4745b27" source="b677cef0" target="19d2ba8c" relationship="d49689f3"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="01e72322" targetConnections="a86c650f 180aed1b" zentaElement="a3430d97">
+          <bounds x="12" y="329"/>
+          <sourceConnection xsi:type="zenta:Connection" id="cdff2b43" source="01e72322" target="19d2ba8c" relationship="76bc01b6"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="563383d8" targetConnections="99db8734" zentaElement="f0e85a23">
+          <bounds x="12" y="229"/>
+          <sourceConnection xsi:type="zenta:Connection" id="b7903082" source="563383d8" target="19d2ba8c" relationship="da4a7db4"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="e2127d81" targetConnections="db56838e" zentaElement="18b41f3d">
+          <bounds x="348" y="290" width="157" height="42"/>
+          <sourceConnection xsi:type="zenta:Connection" id="e710320c" source="e2127d81" target="317dcb3d" relationship="5ff84cad"/>
+          <sourceConnection xsi:type="zenta:Connection" id="596dcaf6" source="e2127d81" target="3f8707f7" relationship="9992e6a8"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="4ecf2838" targetConnections="434ea276" zentaElement="25d07532">
+          <bounds x="348" y="396" width="157" height="42"/>
+          <sourceConnection xsi:type="zenta:Connection" id="6b62f2d3" source="4ecf2838" target="19d2ba8c" relationship="b7ddb94c"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="f02dbf10" targetConnections="6d448f80" zentaElement="fd9a3647">
+          <bounds x="348" y="342" width="157" height="42"/>
+          <sourceConnection xsi:type="zenta:Connection" id="f4a173e5" source="f02dbf10" target="82bf8368" relationship="04bb57cf"/>
+          <sourceConnection xsi:type="zenta:Connection" id="0a24f471" source="f02dbf10" target="3f8707f7" relationship="01c8e533"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="317dcb3d" targetConnections="1b3c6a0d e710320c" zentaElement="22fc0485">
+          <bounds x="672" y="229"/>
+          <sourceConnection xsi:type="zenta:Connection" id="a08160f2" source="317dcb3d" target="19d2ba8c" relationship="0df4f6fb"/>
+          <sourceConnection xsi:type="zenta:Connection" id="cda3fdb0" source="317dcb3d" target="19d2ba8c" relationship="02d406d9"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="82bf8368" targetConnections="f4a173e5" zentaElement="686d2ea0">
+          <bounds x="672" y="329"/>
+          <sourceConnection xsi:type="zenta:Connection" id="d68ff4a7" source="82bf8368" target="19d2ba8c" relationship="8a5c79d5"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="19d2ba8c" targetConnections="d68ff4a7 a08160f2 cda3fdb0 c4745b27 6b62f2d3 b7903082 cdff2b43" zentaElement="5dc486b7">
+          <bounds x="252" y="492"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3f8707f7" targetConnections="596dcaf6 0a24f471" zentaElement="8da4ba3d">
+          <bounds x="540" y="480"/>
+        </child>
+      </element>
+    </folder>
+  </folder>
+</zenta:model>
